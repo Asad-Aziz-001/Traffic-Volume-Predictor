@@ -9,11 +9,16 @@ import matplotlib.pyplot as plt
 # Load Saved Artifacts
 # ---------------------------------
 import gdown
+import os
+import joblib
 
-url = "https://drive.google.com/file/d/1SgUb5hJYpMsxSN-9f0IMa1pSBWUFJPh_/view?usp=sharing"
-gdown.download(url, "traffic_volume_model.pkl", quiet=False)
+file_id = "1SgUb5hJYpMsxSN-9f0IMa1pSBWUFJPh_"  # Only ID
+url = f"https://drive.google.com/uc?id={file_id}"
 
-model = joblib.load("traffic_volume_model.pkl")
+if not os.path.exists("model.pkl"):
+    gdown.download(url, "model.pkl", quiet=False)
+
+model = joblib.load("model.pkl")
 scaler = joblib.load("scaler.pkl")
 feature_columns = joblib.load("feature_columns.pkl")
 
