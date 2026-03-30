@@ -1,12 +1,18 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
+import os
 import joblib
 import matplotlib.pyplot as plt
 
 # ---------------------------------
 # Load Saved Artifacts
 # ---------------------------------
+import gdown
+
+url = "https://drive.google.com/file/d/1SgUb5hJYpMsxSN-9f0IMa1pSBWUFJPh_/view?usp=sharing"
+gdown.download(url, "traffic_volume_model.pkl", quiet=False)
+
 model = joblib.load("traffic_volume_model.pkl")
 scaler = joblib.load("scaler.pkl")
 feature_columns = joblib.load("feature_columns.pkl")
@@ -141,4 +147,4 @@ if st.button("🚗 Predict Traffic Volume"):
 # Footer
 # ---------------------------------
 st.markdown("---")
-st.markdown("**Built with Machine Learning & Streamlit** 🚀")
+st.markdown("**Built by ASAD AZIZ** 🚀")
