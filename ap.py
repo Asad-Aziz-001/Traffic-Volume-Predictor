@@ -8,6 +8,8 @@ import matplotlib.patches as mpatches
 from sklearn.exceptions import InconsistentVersionWarning
 import warnings
 warnings.filterwarnings('ignore', category=InconsistentVersionWarning)
+from sklearn.exceptions import DataConversionWarning
+warnings.filterwarnings('ignore')
 
 # ─── Page Config ────────────────────────────────────────────────────────────
 st.set_page_config(
