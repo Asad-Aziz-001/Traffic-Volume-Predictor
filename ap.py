@@ -13,7 +13,7 @@ warnings.filterwarnings('ignore')
 
 # ─── Page Config ────────────────────────────────────────────────────────────
 st.set_page_config(
-    page_title="TrafficIQ · Volume Predictor",
+    page_title="Traffic-Volume-Predictor",
     page_icon="🚦",
     layout="wide",
     initial_sidebar_state="expanded"
