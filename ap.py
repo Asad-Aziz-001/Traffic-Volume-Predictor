@@ -647,7 +647,7 @@ if predict_clicked:
     ax.set_ylabel("Normalized Value", color="#8899b4", fontsize=9, labelpad=8, fontfamily='monospace')
     ax.tick_params(colors="#8899b4", labelsize=8.5)
     ax.spines[:].set_visible(False)
-    ax.yaxis.grid(True, color="rgba(251,191,36,0.07)", linewidth=0.8, zorder=0)
+    ax.yaxis.grid(True, color=(0.98, 0.75, 0.14, 0.07), linewidth=0.8, zorder=0)
     ax.set_axisbelow(True)
     for label in ax.get_xticklabels():
         label.set_fontfamily('monospace')
