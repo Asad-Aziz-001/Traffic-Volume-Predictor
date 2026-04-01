@@ -4,6 +4,9 @@ import numpy as np
 import os
 import joblib
 import matplotlib.pyplot as plt
+from sklearn.exceptions import InconsistentVersionWarning
+import warnings
+warnings.filterwarnings('ignore', category=InconsistentVersionWarning)
 
 # ---------------------------------
 # Load Saved Artifacts
