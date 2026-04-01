@@ -564,8 +564,9 @@ predict_clicked = st.button("🚗  RUN TRAFFIC PREDICTION")
 
 # ─── Results ────────────────────────────────────────────────────────────────
 if predict_clicked:
-    input_scaled = scaler.transform(input_df)
-    prediction   = model.predict(input_scaled)[0]
+    input_scaled_arr = scaler.transform(input_df)
+    input_scaled     = pd.DataFrame(input_scaled_arr, columns=feature_columns)
+    prediction       = model.predict(input_scaled)[0]
     conf_low     = int(prediction * 0.90)
     conf_high    = int(prediction * 1.10)
     pred_int     = int(prediction)
